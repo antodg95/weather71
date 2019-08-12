@@ -2,8 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Weather 71</title>
+    <link rel="stylesheet" href="styles.min.css">
   </head>
-  <body>
+  <body onload="onLoad();">
+    <div class="searchDiv">
+      <input id="search-input" type="text" name="searchInput" value="" placeholder="City Name or ZIP">
+      <button id="search-btn" type="button" name="button">Weather It!</button>
+      <div id="result" class="result">
+      </div>
+    </div>
+
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script data-main="main.js" src="require.js"></script>
+    <script type="application/javascript;version=1.7"></script>
+
   </body>
 </html>
