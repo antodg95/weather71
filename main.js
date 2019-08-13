@@ -89,7 +89,7 @@ function analizeData(weather) {
   for (var i = dayS.indexOf(letter); i<dayS.length; i++) {
     var weatherSection = weather.list[m];
     var div = document.createElement('div');
-    div.className = '' + daySectionToName(daySection(dayS.charAt(i)));
+    div.className = '' + daySectionToName(dayS.charAt(i));
 
     var divIcon = document.createElement('div');
     divIcon.className = 'icon';
@@ -108,7 +108,7 @@ function analizeData(weather) {
     divTitle.className = 'title';
 
     var divTitleContent = document.createElement('h2');
-    divTitleContent.innerHTML = daySectionToName(daySection(dayS.charAt(i)));
+    divTitleContent.innerHTML = daySectionToName(dayS.charAt(i));
 
     divTitle.appendChild(divTitleContent);
     divText.appendChild(divTitle);
@@ -259,7 +259,7 @@ function daySectionToName(letter) {
 
 function daySection(letter) {
 
-  var floor = Math.floor(21 / 6.0) * 6;
+  var floor = Math.floor(letter/ 6.0) * 6;
   switch (floor) {
     case 0:
       return 'n';
@@ -280,6 +280,7 @@ function daySection(letter) {
 }
 
 function numberToNameDay(number) {
+  if(number>6) number = number - 7;
   switch (number) {
     case 0:
       return "Sunday";
