@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather 71</title>
+  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="flickity.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onLoad();">
+  <div class="globalDiv">
+    <div class="searchDiv">
+      <input id="search-input" type="text" name="searchInput" value="" placeholder="City Name or ZIP">
+      <button id="search-btn" type="button" name="button"><i class="fas fa-search"></i></button>
+      <button id="geo-btn" type="button" name="button"><i class="fas fa-map-marker-alt"></i></button>
+    </div>
+  </div>
+
+  <div id="result" class="result">
+
+  </div>
+
+
+  <div id="carousel" class="carousel js-flickity" data-flickity-options='{ "cellAlign": "center", "contain": false, "percentPosition": true, "resize": false,
+                                                              "prevNextButtons": false, "pageDots": false }'>
+
+    <div class="card-day">
+      <h1 class="day">Waiting for a Seach...</h1>
+      <div class="card">
+      </div>
+    </div>
+
+
+    <div class="card-day">
+      <h1 class="day"></h1>
+      <div class="card">
+      </div>
+    </div>
+
+
+    <div class="card-day">
+      <h1 class="day"></h1>
+      <div class="card">
+      </div>
+    </div>
+
+    <div class="card-day">
+      <h1 class="day"></h1>
+      <div class="card">
+      </div>
+    </div>
+
+    <div class="card-day">
+      <h1 class="day"></h1>
+      <div class="card">
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="main.js" charset="utf-8"></script>
+  <script type="text/javascript" src="flickity.min.js" charset="utf-8"></script>
+  <script src="https://kit.fontawesome.com/e55db0066f.js"></script>
+
+</body>
+
+</html>

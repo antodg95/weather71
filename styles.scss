@@ -2,36 +2,173 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
+$morning: #c3727c;
+$day: #e8817f;
+$evening: #5a336e;
+$night: #311f62;
+$middle: #8d5273;
 
 body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #c3c4cd;
 }
 
-.searchDiv {
-  width: 50%;
-  height: 50%;
+.globalDiv {
+  width: 100%;
+  height: 20vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border: 1px solid lightgrey;
-  border-radius: 20px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px;
 
-  #search-input {
-    margin-top: 20px;
+  .searchDiv {
+    border-bottom: 1px solid #a8adb4;
+
+    #search-input {
+      padding: 20px 110px;
+      background-color: transparent;
+      border-style: none;
+      font-size: 2em;
+      text-align: center;
+      color: white;
+
+      &::placeholder {
+        color: #a8adb4;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    #search-btn {
+      background-color: transparent;
+      border-style: none;
+      font-size: 20px;
+      padding: 20px;
+      color: white;
+      margin: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    #geo-btn {
+      background-color: transparent;
+      border-style: none;
+      font-size: 20px;
+      padding: 20px;
+      color: white;
+      margin: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
+}
 
-  #search-btn {
-    margin-top: 10px;
-  }
+.result {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.3em;
+}
 
-  .result {
-    display: grid;
-    text-align: center;
+.carousel {
+  height: 70vh;
+
+  .card-day {
+    width: 60%;
+    height: 90%;
+    background-color: $middle;
+    border-radius: 20px;
+    color: white;
+    margin-right: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+
+    h1 {
+      height: 8%;
+      color: white;
+      text-align: center;
+      padding: 10px 0px;
+    }
+
+    .card {
+
+      height: 92%;
+
+      div {
+        height: 25%;
+        display: flex;
+
+        .icon {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            height: 100%;
+          }
+        }
+
+        .text {
+          width: 50%;
+          height: 100%;
+          display: grid;
+
+          .title {
+            text-transform: uppercase;
+            justify-self: center;
+            font-size: 900;
+            padding-top: 10px;
+            color: rgba(white,0.6);
+          }
+
+          .description {
+            display: grid;
+            font-size: 1.6em;
+          }
+        }
+
+        &:first-of-type {
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+        }
+
+        &:last-of-type {
+          border-bottom-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+        }
+      }
+
+      .morning {
+        background-color: $morning;
+      }
+
+      .day {
+        background-color: $day;
+      }
+
+      .evening {
+        background-color: $evening;
+      }
+
+      .night {
+        background-color: $night;
+      }
+    }
+
+    &.is-selected {
+      transform: scale(1);
+    }
   }
 }
