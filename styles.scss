@@ -20,6 +20,7 @@ body {
   text-align: center;
   font-size: 2em;
   margin-top: 20px;
+
   span {
     color: $middle;
   }
@@ -95,7 +96,7 @@ body {
 
   .card-day {
     width: 60%;
-    height: 90%;
+    height: 100%;
     background-color: $middle;
     border-radius: 20px;
     color: white;
@@ -108,11 +109,10 @@ body {
       height: 5%;
       color: white;
       text-align: center;
-      padding: 10px 0px;
+      padding: 10px 0;
     }
 
     .card {
-
       height: 95%;
 
       div {
@@ -180,6 +180,120 @@ body {
 
     &.is-selected {
       transform: scale(1);
+    }
+  }
+}
+@media only screen and (min-width: 600px) {}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .carousel {
+    height: 60vh;
+
+    .card-day {
+      width: 50%;
+      margin-right: 20px;
+
+      h1 {
+        height: 8%;
+      }
+
+      .card {
+        height: 92%;
+
+        .text {
+          .description {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .carousel {
+    height: 50vh;
+
+    .card-day {
+      width: 40%;
+      height: 100%;
+
+      h1 {
+        height: 5%;
+        padding: 0;
+        margin: 0;
+        font-size: 0.8em;
+      }
+
+      .card {
+        height: 95%;
+
+        div {
+          height: 25%;
+          display: flex;
+
+          .icon {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              height: 100%;
+            }
+          }
+
+          .text {
+            width: 50%;
+            height: 100%;
+            display: flex;
+
+            .title {
+              order:2;
+              width: 50%;
+              height: 100%;
+              font-size: 0.6em;
+              padding: 0;
+              margin: 0;
+              justify-content: flex-end;
+              padding-right: 10px;
+            }
+
+            .description {
+              order:1;
+              width: 50%;
+              height: 100%;
+              display: grid;
+              grid-gap: 0;
+              font-size: 0.8em;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .carousel {
+    .card-day {
+      h1 {
+        font-size: 1em;
+      }
+      .card {
+        div {
+          .text {
+            .title {
+              font-size: 1em;
+            }
+            .description {
+              font-size: 1em;
+            }
+          }
+        }
+      }
     }
   }
 }
