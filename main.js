@@ -1,4 +1,4 @@
-var apiKey = '08874f09563464fbad6669d17899a3e4';
+var apiKey = 'YOUR_API_KEY';
 var unit = "metric";
 
 function onLoad() {
